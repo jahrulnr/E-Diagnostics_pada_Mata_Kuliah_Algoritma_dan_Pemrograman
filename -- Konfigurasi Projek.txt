@@ -1,0 +1,18 @@
+Konfigurasi Laravel (Windows)
+- Buka folder projek laravel
+- kemudian pada addressbar ketik "cmd" kemudian enter (tanpa tanda kutip)
+- pada cmd, ketikkan perintah berikut 
+
+	composer install
+	copy .env.example .env
+	php artisan key:generate
+	php artisan migrate
+	php artisan serve
+
+- pada browser, buka "localhost:8000"
+
+Konfigurasi Android
+- Buka Android Studio, buka projek Android E-diagnostics.
+- Setelah projek terbuka, buka path app/src/jahrulnr/e_diagnosticsuir
+- buka file config.java
+- ganti value dari variable "host" ke nama domain yang digunakan untuk server laravel.

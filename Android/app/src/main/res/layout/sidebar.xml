@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bootstrap_gray">
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bootstrapText="{fa_book}  E-Diagnostics"
+        app:bootstrapHeading="h4"
+        android:backgroundTint="@color/transparent"
+        android:layout_alignParentStart="true"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/refresh"
+        android:textColor="@color/white"
+        app:bootstrapText="{fa_refresh}"
+        app:roundedCorners="true"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/about"
+        android:textColor="@color/white"
+        app:roundedCorners="true"
+        app:bootstrapText="{fa_info}"/>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <LinearLayout
+        android:id="@+id/ly_materi"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.beardedhen.androidbootstrap.BootstrapLabel
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bootstrapText="Tes Materi"
+            app:bootstrapHeading="h4"/>
+
+        <GridView
+            android:id="@+id/option_pertemuan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/regular_container_bg"
+            android:layout_marginTop="-3dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="center"
+            android:horizontalSpacing="8dp"
+            android:verticalSpacing="8dp"
+            android:numColumns="2"
+            android:listSelector="@color/bootstrap_brand_primary"/>
+
+    </LinearLayout>
+</merge>

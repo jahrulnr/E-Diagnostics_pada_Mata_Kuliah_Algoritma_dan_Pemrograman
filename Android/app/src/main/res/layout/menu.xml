@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.EDiagnosticsUIR_menu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sidebar"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:stretchColumns="1" >
+
+                <TableRow
+                    android:layout_width="match_parent">
+
+                    <com.beardedhen.androidbootstrap.BootstrapLabel
+                        android:id="@+id/sambutanNama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_column="0"
+                        app:bootstrapBrand="warning"
+                        android:text="Halo --nama--!"/>
+
+                    <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:id="@+id/btn_dMateri"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        app:bootstrapSize="sm"
+                        app:roundedCorners="true"
+                        android:text="Download Materi"/>
+
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/table"
+                android:padding="8dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btnMateri"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    app:bootstrapBrand="success"
+                    app:bootstrapSize="lg"
+                    app:roundedCorners="true"
+                    app:bootstrapText="Tes Materi   {fa_pencil}" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btnHasilTes"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    app:bootstrapBrand="primary"
+                    app:bootstrapSize="lg"
+                    app:roundedCorners="true"
+                    app:bootstrapText="Hasil Tes   {fa_area_chart}"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:padding="8dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btnProfil"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    app:roundedCorners="true"
+                    app:bootstrapBrand="danger"
+                    app:bootstrapSize="lg"
+                    app:bootstrapText="Profil   {fa_user}"/>
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btnKeluar"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    app:roundedCorners="true"
+                    app:bootstrapBrand="info"
+                    app:bootstrapSize="lg"
+                    app:bootstrapText="Keluar   {fa_sign_out}"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/line2">
+
+                <!--Download Materi-->
+                <include layout="@layout/d_materi" />
+                <!--Materi-->
+                <include layout="@layout/materi" />
+                <!--Hasil Tes-->
+                <include layout="@layout/hasil_tes" />
+                <!--Profil-->
+                <include layout="@layout/profil"/>
+
+                <!--Loading-->
+                <include layout="@layout/loading"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Topbar dan Navbar -->
+    <include
+        layout="@layout/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"/>
+
+    <include
+        android:id="@+id/sidebar"
+        layout="@layout/sidebar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"/>
+
+</RelativeLayout>

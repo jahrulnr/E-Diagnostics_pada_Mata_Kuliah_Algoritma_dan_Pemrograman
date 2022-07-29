@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sidebar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="52dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/judul_materi"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/soal_container_bg"
+                android:scrollbars="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <!--Soal Container-->
+                <TextView
+                    android:id="@+id/id_soal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:id="@+id/bobot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/no_soal"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginStart="-2dp"
+                    app:bootstrapBrand="warning"
+                    app:bootstrapHeading="h5"
+                    app:roundedCorners="false"
+                    app:bootstrapText="Bobot n"/>
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:id="@+id/no_soal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    app:bootstrapBrand="info"
+                    app:bootstrapHeading="h5"
+                    app:roundedCorners="false"
+                    app:bootstrapText="Soal n"/>
+
+                <TextView
+                    android:id="@+id/soal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/no_soal"
+                    android:layout_marginTop="-2dp"
+                    android:background="@drawable/soal_bg"
+                    android:padding="8dp"
+                    android:textAlignment="textStart"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:text="Contoh soal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/soal"
+                    android:layout_toRightOf="@+id/no_jawaban"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="* Isi spasi jika tidak menjawab"/>
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:id="@+id/no_jawaban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/soal"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="2dp"
+                    app:bootstrapBrand="regular"
+                    app:bootstrapHeading="h5"
+                    app:roundedCorners="false"
+                    app:bootstrapText="Jawaban"/>
+
+                <EditText
+                    android:id="@+id/jawaban"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/no_jawaban"
+                    android:layout_marginTop="-1dp"
+                    android:padding="8dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/jawaban_bg"
+                    android:fontFamily="sans-serif"
+                    android:textSize="18dp"
+                    android:hint="Jawab ..."/>
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btnPrev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jawaban"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    app:bootstrapBrand="primary"
+                    app:roundedCorners="true"
+                    app:bootstrapSize="md"
+                    app:fontAwesomeIcon="fa_arrow_left"/>
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jawaban"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    app:bootstrapBrand="primary"
+                    app:roundedCorners="true"
+                    app:bootstrapSize="md"
+                    app:fontAwesomeIcon="fa_arrow_right"/>
+            </RelativeLayout>
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:id="@+id/text_materi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-4dp"
+                app:bootstrapHeading="h5"
+                app:bootstrapBrand="info"
+                app:bootstrapText="Materi  {fa_pencil}"/>
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:id="@+id/judul_materi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_materi"
+                android:layout_marginBottom="15dp"
+                app:bootstrapBrand="success"
+                app:roundedCorners="false"
+                app:bootstrapHeading="h4"
+                app:bootstrapText="Contoh Materi"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/kirim_jawaban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        app:bootstrapBrand="primary"
+        app:roundedCorners="true"
+        app:bootstrapSize="lg"
+        app:bootstrapText="Serahkan {fa_send}"/>
+
+    <!-- Topbar dan Navbar -->
+    <include
+        layout="@layout/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"/>
+
+    <include
+        android:id="@+id/sidebar"
+        layout="@layout/sidebar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"/>
+
+</RelativeLayout>

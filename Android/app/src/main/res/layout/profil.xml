@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <RelativeLayout
+        android:id="@+id/ly_profil"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <com.beardedhen.androidbootstrap.BootstrapLabel
+            android:id="@+id/text_profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profil"
+            app:bootstrapHeading="h4"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_profil"
+            android:background="@drawable/regular_container_bg"
+            android:layout_marginTop="-3dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="15dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:id="@+id/text_npm"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:gravity="left"
+                app:bootstrapText="NPM"
+                app:bootstrapHeading="h5"
+                app:bootstrapBrand="secondary" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toEndOf="@id/text_npm"
+                android:backgroundTint="@color/bootstrap_gray_lighter"
+                app:bootstrapSize="lg"
+                android:enabled="false"
+                android:id="@+id/npm"
+                android:text="-"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/npm"
+                android:backgroundTint="@color/transparent"
+                android:gravity="left"
+                android:id="@+id/text_nama"
+                app:bootstrapText="Nama"
+                app:bootstrapHeading="h5"
+                app:bootstrapBrand="secondary" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/text_nama"
+                android:layout_below="@id/npm"
+                android:backgroundTint="@color/bootstrap_gray_lighter"
+                android:id="@+id/nama"
+                android:enabled="false"
+                android:text="-"
+                android:autofillHints="name"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nama"
+                android:backgroundTint="@color/transparent"
+                android:gravity="left"
+                app:bootstrapText="Kelas"
+                app:bootstrapHeading="h5"
+                app:bootstrapBrand="secondary" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_alignParentEnd="true"
+                android:enabled="false"
+                android:layout_toEndOf="@id/text_nama"
+                android:layout_below="@id/nama"
+                android:backgroundTint="@color/bootstrap_gray_lighter"
+                android:id="@+id/kelas"
+                android:inputType="text"
+                android:text="-"
+                app:bootstrapHeading="h5"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kelas"
+                android:backgroundTint="@color/transparent"
+                android:gravity="left"
+                app:bootstrapText="Email"
+                app:bootstrapHeading="h5"
+                app:bootstrapBrand="secondary" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/text_nama"
+                android:layout_below="@id/kelas"
+                android:id="@+id/email"
+                android:text="-"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email"
+                android:backgroundTint="@color/transparent"
+                android:gravity="left"
+                app:bootstrapText="Password"
+                app:bootstrapHeading="h5"
+                app:bootstrapBrand="secondary" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/text_nama"
+                android:layout_below="@id/email"
+                android:id="@+id/password"
+                android:hint="******"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/password"
+                app:roundedCorners="true"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                android:id="@+id/simpan_profil"
+                android:text="Simpan"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>
